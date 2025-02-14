@@ -1,0 +1,21 @@
+### Configure a variable for the web service base addres.
+@base_address = https://localhost:5151/customers/
+
+
+### Make a POST request to the base address. Make sure the customer does not exists already
+### since creating a duplicate customer ID error is not handled yet.
+POST {{base_address}}
+Content-Type: application/json
+
+{
+  "customerID": "ABCXY",
+  "companyName": "ABC Corp",
+  "contactName": "John Smith",
+  "contactTitle": "Sir",
+  "address": "Main St.",
+  "city": "New York",
+  "region": "NY",
+  "postalCode": "90210",
+  "country": "USA",
+  "phone": "(123) 555-1234"
+}

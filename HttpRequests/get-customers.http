@@ -1,0 +1,30 @@
+### Configure a variable for the web service base addres.
+@base_address = https://localhost:5151/customers/
+
+
+### Make a GET request to the base address to get all customers
+GET {{base_address}}
+
+
+
+### GET customers request for all customers in Germany
+GET {{base_address}}in/Germany
+
+
+
+### GET customers request for all customers in Italy
+GET {{base_address}}in/italy
+
+
+
+### GET customers request for a country that does not exists
+GET {{base_address}}in/Utopia
+
+
+
+### GET a single customer by its Id
+GET {{base_address}}ALFKI
+
+
+### GET a single customer by an Id that does not exists
+GET {{base_address}}PUZZI!
