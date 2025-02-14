@@ -1,0 +1,12 @@
+﻿@*
+    This file defines a <Router> component that scans the current assembly
+    for page components and their registered routes.
+*@
+
+
+<Router AppAssembly="typeof(Program).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
+    </Found>
+</Router>
+

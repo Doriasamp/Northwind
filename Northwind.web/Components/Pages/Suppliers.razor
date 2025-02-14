@@ -1,0 +1,41 @@
+﻿@page "/suppliers"
+@* Injecting the NorthwindContext database context *@
+@inject NorthwindContext _db
+
+@code
+{
+    public IEnumerable<Supplier>? Companies { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Companies = _db.Suppliers.OrderBy(c => c.Country).ThenBy(c => c.CompanyName);
+
+    }
+}
+
+<div class="row">
+    <h1 class="display-2">Suppliers</h1>
+    <table class="table">
+        <thead class="thead-inverse">
+        <tr>
+            <th>Company Name</th>
+            <th>Country</th>
+            <th>Phone</th>
+        </tr>
+        </thead>
+        <tbody>
+        @if (Companies is not null)
+        {
+            foreach (var company in Companies)
+            {
+                <tr>
+                    <td>@company.CompanyName</td>
+                    <td>@company.Country</td>
+                    <td>@company.Phone</td>
+                </tr>
+            }
+
+        }
+        </tbody>
+    </table>
+</div>

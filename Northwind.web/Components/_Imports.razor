@@ -1,0 +1,15 @@
+﻿@*
+    This file imports namespaces for all the .razor files so that you do not need
+to import them at the top of every .razor file.
+At a minimum, you will want to import the namespace for Blazor routing and your
+local project Blazor components.
+*@
+
+@using Microsoft.AspNetCore.Components.Routing
+@using Northwind.web
+@using Northwind.web.Components
+@using Northwind.EntityModels   @* To use NorthwindContext database context*@
+@using Microsoft.AspNetCore.Components.Web
+
+
+

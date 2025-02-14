@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+	<ItemGroup Label="Globally and statically import System.Console">
+		<Using Include="System.Console" Static="true" />
+	</ItemGroup>
+
+
+	<ItemGroup Label="Register EF Core database context as a dependency service for the website">
+		<ProjectReference Include="..\Northwind.DataContext.Sqlite\Northwind.DataContext.Sqlite.csproj" />
+	</ItemGroup>
+
+</Project>
