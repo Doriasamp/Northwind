@@ -1,0 +1,8 @@
+﻿/*
+	Shell prompt for auto-generating entity class models for all tables in a database (or schema).
+	Usage: 
+		1. Open a command prompt.
+		2. Change directory to the location of the Northwind.EntityModels.Sqlite project.
+		3. Make sure that the package Microsoft.EntityFrameworkCore.Design is installed in the project folder.
+		4. Run the following command:
+			dotnet ef dbcontext scaffold "Data Source=../Northwind.db" Microsoft.EntityFrameworkCore.Sqlite --namespace Northwind.EntityModels --data-annotations
